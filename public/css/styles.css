@@ -9,38 +9,145 @@ html {
 
 :root {
   --darkBackground: #141d2f;
+  --darkComponentBackground: #1e2a47;
+
   --lightBackground: #f6f8ff;
+  --lightComponentBackground: #fff;
+  --lightFontColor: #4b6a9b;
+}
+
+.dark-mode-body {
+  color: #fff;
+  background-color: var(--darkBackground);
+}
+.dark-mode-component {
+  background-color: var(--darkComponentBackground);
 }
 
 body {
   background-color: var(--lightBackground);
   text-align: center;
   margin: 0 auto;
-}
-
-main {
   padding: 2.4rem;
 }
 
-.profile_heading {
+.logo-mode {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.profile_image {
+main {
+  padding: 3.1rem 2.4rem 8rem 2.4rem;
+  background-color: #fefefe;
+  border-radius: 1.5rem;
+  margin-top: 1.6rem;
+}
+
+.profile-heading {
+  display: flex;
+
+  text-align: left;
+}
+
+.profile-image {
   width: 70px;
   border-radius: 50%;
 }
 
-.profile_heading h1 {
-  font-size: 2.6rem;
-  line-height: 3.8rem;
-  font-weight: 700;
-  margin: 0;
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.9rem;
+  justify-content: space-between;
 }
-.profile_heading h3 {
-  color: #0079ff;
+
+.profile-heading h1 {
   font-size: 1.6rem;
   line-height: 2.4rem;
+  font-weight: 700;
   margin: 0;
+  color: #2b3442;
+}
+.profile-heading h3 {
+  color: #0079ff;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  margin: 0;
+}
+
+.profile-heading p {
+  margin: 0;
+  color: #697c9a;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+}
+
+.profile-description {
+  margin-top: 3.3rem;
+}
+.profile-description h2 {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  text-align: left;
+  color: #4b6a9b;
+  margin: 0;
+  font-weight: 400;
+}
+
+.profile-summary {
+  background-color: var(--lightBackground);
+  padding: 1.5rem 1.8rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  margin-top: 2.3rem;
+}
+
+.profile-summary table {
+  width: 100%;
+}
+
+.profile-summary table th {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--lightFontColor);
+}
+.profile-summary table td {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.profile-contact-details ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 2.4rem;
+  padding: 0;
+  text-align: left;
+  color: #4b6a9b;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+}
+
+.profile-contact-details li {
+  margin-top: 1.6rem;
+}
+
+.not-available {
+  opacity: 0.5;
+}
+
+.github-icon {
+  background-image: url('images/icon-company.svg');
+  width: 19px;
+}
+
+.test {
+  background-image: url('images/icon-company.svg');
+
+  width: 100px;
+  height: 100px;
+  border: solid 1px red;
 }

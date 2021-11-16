@@ -16,33 +16,45 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="public/css/styles.css" />
 
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
-    <div>devfinder Light Dark</div>
+    <section class="logo-mode">
+      <div class="logo">devfinder</div>
+      <div class="mode">Light Dark</div>
+    </section>
     <form>
       <input type="search" placeholder="Search GitHub username..." />
       <button type="submit">Search</button>
     </form>
     <main>
-      <section class="profile_heading">
-        <img class="profile_image" src="/public/images/octocat.png" />
-        <div class="profile_details">
-          <h1>The Octocat</h1>
-          <a><h3>@octocat</h3></a>
+      <section class="profile-heading">
+        <img class="profile-image" src="/public/images/octocat.png" />
+        <div class="profile-details">
+          <div>
+            <h1>The Octocat</h1>
+            <a><h3>@octocat</h3></a>
+          </div>
           <p>Joined 25 Jan 2011</p>
         </div>
       </section>
-      <section>
+
+      <section class="profile-description">
         <h2>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi amet facilis
-          error cupiditate libero pariatur laudantium harum autem. Placeat, sint nam
-          repellat vero laudantium ab temporibus id assumenda libero corporis.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Donec odio. Quisque
+          voluptat mattis eros.
         </h2>
       </section>
-      <summary>
+
+      <section class="profile-summary">
         <table>
           <tr>
             <th>Repos</th>
@@ -55,16 +67,17 @@
             <td>9</td>
           </tr>
         </table>
-      </summary>
+      </section>
 
-      <section>
+      <section class="profile-contact-details">
         <ul>
-          <li>San Francisco</li>
-          <li>https://github.blog</li>
-          <li>Not Available</li>
-          <li>@github</li>
+          <li><i class="fas fa-map-marker-alt"></i>San Francisco</li>
+          <li><i class="fas fa-link"></i>https://github.blog</li>
+          <li class="not-available"><i class="fab fa-twitter"></i>Not Available</li>
+          <li><i class="github-icon"></i>@github</li>
         </ul>
       </section>
+      <div class="test"></div>
     </main>
   </body>
 </html>
