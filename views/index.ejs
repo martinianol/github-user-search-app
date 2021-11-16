@@ -28,10 +28,14 @@
   </head>
   <body>
     <section class="logo-mode">
-      <div class="logo">devfinder</div>
-      <div class="mode">Light Dark</div>
+      <h2 class="logo">devfinder</h2>
+      <div class="mode">
+        <p>DARK</p>
+        <object data="/public/images/icon-moon.svg"></object>
+      </div>
     </section>
-    <form>
+    <form class="input-search">
+      <object id="search-icon" data="/public/images/icon-search.svg"></object>
       <input type="search" placeholder="Search GitHub username..." />
       <button type="submit">Search</button>
     </form>
@@ -70,14 +74,19 @@
       </section>
 
       <section class="profile-contact-details">
+        <div class="icons">
+          <object data="/public/images/icon-location.svg"></object>
+          <object data="/public/images/icon-website.svg"></object>
+          <object class="not-available" data="/public/images/icon-twitter.svg"></object>
+          <object data="/public/images/icon-company.svg"></object>
+        </div>
         <ul>
-          <li><i class="fas fa-map-marker-alt"></i>San Francisco</li>
-          <li><i class="fas fa-link"></i>https://github.blog</li>
-          <li class="not-available"><i class="fab fa-twitter"></i>Not Available</li>
-          <li><i class="github-icon"></i>@github</li>
+          <li>San Francisco</li>
+          <li>https://github.blog</li>
+          <li class="not-available">Not Available</li>
+          <li>github</li>
         </ul>
       </section>
-      <div class="test"></div>
     </main>
   </body>
 </html>
