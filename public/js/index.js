@@ -6,10 +6,12 @@ const form = document.querySelector('form');
 const main = document.querySelector('main');
 const user = document.querySelector('#user')
 const summary = document.querySelector('.profile-summary');
+const summaryData = document.querySelectorAll('.profile-summary td');
+
 const icons = document.querySelectorAll('i img');
 
 const placeHolder = document.querySelector('input[type=search]');
-console.log(placeHolder.getAttribute('style'));
+console.log(summaryData);
 placeHolder.style.setProperty("--c", "#4b6a9b")
 
 mode.onclick = () => {
@@ -29,5 +31,6 @@ mode.onclick = () => {
   };
 
   icons.forEach(icon => icon.classList.toggle('dark-mode-icons'));
+  summaryData.forEach(element => element.classList.toggle('dark-mode-body'));
 }
 

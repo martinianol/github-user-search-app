@@ -46,6 +46,15 @@ body {
   cursor: pointer;
 }
 
+.modeText:hover,
+#modeImg:hover {
+  filter: brightness(0);
+}
+.modeText:hover,
+#modeImg:hover {
+  filter: brightness(0);
+}
+
 .modeText {
   font-size: 1.3rem;
   font-weight: 700;
@@ -179,7 +188,6 @@ main {
   font-size: 1.3rem;
   line-height: 2.5rem;
   text-align: left;
-
   margin: 0;
   font-weight: 400;
 }
@@ -207,6 +215,7 @@ main {
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 2.4rem;
+  color: black;
 }
 .profile-contact-details {
   display: flex;
@@ -251,6 +260,71 @@ main {
 }
 
 .dark-mode-component h1,
-.dark-mode-component p {
+.dark-mode-component p,
+.dark-mode-component table td,
+.dark-mode-component input {
   color: #fff;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 13.6% 12.8%;
+  }
+
+  .input-search button {
+    width: 18.5%;
+    height: 5rem;
+  }
+
+  .input-search input,
+  ::placeholder {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  .input-search {
+    padding: 0.95rem 1rem 0.95rem 3.2rem;
+  }
+
+  main {
+    padding: 4rem;
+  }
+  .profile-image {
+    width: 117px;
+  }
+  .profile-details {
+    display: block;
+  }
+  .profile-contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-contact-details :nth-child(1) {
+    order: 0;
+  }
+  .profile-contact-details :nth-child(2) {
+    order: 2;
+  }
+  .profile-contact-details :nth-child(3) {
+    order: 1;
+  }
+  .profile-contact-details :nth-child(4) {
+    order: 2;
+  }
+
+  .profile-description h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-summary table {
+    text-align: left;
+  }
+
+  .profile-summary table td {
+    font-size: 2.2rem;
+  }
+  .profile-summary table th {
+    font-size: 1.3rem;
+  }
 }
