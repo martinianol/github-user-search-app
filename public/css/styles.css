@@ -46,7 +46,7 @@ body {
   cursor: pointer;
 }
 
-.mode p {
+.modeText {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--lightFontColor);
@@ -239,8 +239,8 @@ main {
 }
 
 .dark-mode-body {
-  color: #fff;
   background-color: var(--darkBackground);
+  color: #fff;
 }
 .dark-mode-component {
   background-color: var(--darkComponentBackground);
