@@ -10,7 +10,6 @@ html {
 :root {
   --darkBackground: #141d2f;
   --darkComponentBackground: #1e2a47;
-
   --lightBackground: #f6f8ff;
   --lightComponentBackground: #fff;
   --lightFontColor: #4b6a9b;
@@ -292,12 +291,33 @@ main {
   .profile-image {
     width: 117px;
   }
+
+  .profile-heading {
+    align-items: center;
+  }
   .profile-details {
     display: block;
+    margin-left: 4.1rem;
+  }
+
+  .profile-details h1 {
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+  }
+  .profile-details h3 {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+  .profile-details p {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    margin-top: 4px;
   }
   .profile-contact-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+    line-height: 2.2rem;
   }
 
   .profile-contact-details :nth-child(1) {
@@ -317,14 +337,27 @@ main {
     font-size: 1.5rem;
   }
 
+  .profile-description {
+    margin-top: 2.4rem;
+  }
+
+  .profile-summary {
+    margin-top: 3.2rem;
+    padding-left: 3.2rem;
+  }
+
   .profile-summary table {
     text-align: left;
   }
 
   .profile-summary table td {
     font-size: 2.2rem;
+    line-height: 3.2rem;
+    padding: 0;
   }
   .profile-summary table th {
     font-size: 1.3rem;
+    line-height: 1.9rem;
+    padding: 0;
   }
 }
