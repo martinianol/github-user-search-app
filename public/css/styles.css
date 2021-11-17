@@ -14,14 +14,7 @@ html {
   --lightBackground: #f6f8ff;
   --lightComponentBackground: #fff;
   --lightFontColor: #4b6a9b;
-}
-
-.dark-mode-body {
-  color: #fff;
-  background-color: var(--darkBackground);
-}
-.dark-mode-component {
-  background-color: var(--darkComponentBackground);
+  --c: #4b6a9b;
 }
 
 body {
@@ -63,7 +56,7 @@ body {
   margin-block-end: 0;
 }
 
-form.input-search {
+.input-search {
   background-color: var(--lightComponentBackground);
   border-radius: 15px;
   margin-top: 3.6rem;
@@ -97,7 +90,7 @@ form.input-search {
 }
 
 ::placeholder {
-  color: var(--lightFontColor);
+  color: var(--c);
   font-size: 1.2rem;
   line-height: 2.5rem;
   font-family: 'Space Mono', monospace;
@@ -128,9 +121,13 @@ input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
+input[type='search'] {
+  background: transparent;
+}
 main {
   padding: 3.1rem 2.4rem 8rem 2.4rem;
   background-color: #fefefe;
+  color: #4b6a9b;
   border-radius: 1.5rem;
   margin-top: 1.6rem;
   filter: drop-shadow(0px 16px 30px rgba(70, 96, 187, 0.1986));
@@ -182,7 +179,7 @@ main {
   font-size: 1.3rem;
   line-height: 2.5rem;
   text-align: left;
-  color: #4b6a9b;
+
   margin: 0;
   font-weight: 400;
 }
@@ -205,7 +202,6 @@ main {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.6rem;
-  color: var(--lightFontColor);
 }
 .profile-summary table td {
   font-weight: 700;
@@ -220,7 +216,7 @@ main {
   padding: 0;
   margin-top: 2.4rem;
   text-align: left;
-  color: #4b6a9b;
+  /* color: #4b6a9b; */
   font-size: 1.3rem;
   line-height: 1.9rem;
 }
@@ -229,17 +225,32 @@ main {
   align-items: center;
   gap: 1.6rem;
 }
-
-.icon-information object {
+.icon-information i {
   width: 20px;
-  height: 20px;
+  display: flex;
+  align-items: center;
 }
-
 .icon-information p {
   margin: 0;
-  align-self: flex-end;
 }
 
 .not-available {
   opacity: 0.5;
+}
+
+.dark-mode-body {
+  color: #fff;
+  background-color: var(--darkBackground);
+}
+.dark-mode-component {
+  background-color: var(--darkComponentBackground);
+  color: #fff;
+}
+.dark-mode-icons {
+  filter: brightness(0) invert(1);
+}
+
+.dark-mode-component h1,
+.dark-mode-component p {
+  color: #fff;
 }
