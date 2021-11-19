@@ -42,61 +42,68 @@
       <button type="submit">Search</button>
     </form>
     <main>
-      <section class="profile-heading">
-        <img class="profile-image" src="/public/images/octocat.png" />
-        <div class="profile-details">
-          <div>
-            <h1 id="user">The Octocat</h1>
-            <a><h3>@octocat</h3></a>
+      <img id="profile-image-desktop" src="/public/images/octocat.png" />
+      <div class="global-details">
+        <section class="profile-heading">
+          <img
+            id="profile-image-mobile"
+            class="profile-image"
+            src="/public/images/octocat.png"
+          />
+          <div class="profile-details">
+            <div>
+              <h1 id="user">The Octocat</h1>
+              <a><h3>@octocat</h3></a>
+            </div>
+            <p>Joined 25 Jan 2011</p>
           </div>
-          <p>Joined 25 Jan 2011</p>
-        </div>
-      </section>
+        </section>
 
-      <section class="profile-description">
-        <h2>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Donec odio. Quisque
-          voluptat mattis eros.
-        </h2>
-      </section>
+        <section class="profile-description">
+          <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Donec odio. Quisque
+            voluptat mattis eros.
+          </h2>
+        </section>
 
-      <section class="profile-summary">
-        <table>
-          <tr>
-            <th>Repos</th>
-            <th>Followers</th>
-            <th>Following</th>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>3938</td>
-            <td>9</td>
-          </tr>
-        </table>
-      </section>
+        <section class="profile-summary">
+          <table>
+            <tr>
+              <th>Repos</th>
+              <th>Followers</th>
+              <th>Following</th>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>3938</td>
+              <td>9</td>
+            </tr>
+          </table>
+        </section>
 
-      <section class="profile-contact-details">
-        <div class="icon-information">
-          <i><img src="/public/images/icon-location.svg" /> </i>
-          <p>San Francisco</p>
-        </div>
-        <div class="icon-information">
-          <i><img src="/public/images/icon-website.svg" /></i>
-          <p>https://github.blog</p>
-        </div>
-        <div class="icon-information not-available">
-          <i>
-            <img src="/public/images/icon-twitter.svg" />
-          </i>
-          <p>Not Available</p>
-        </div>
-        <div class="icon-information">
-          <i>
-            <img src="/public/images/icon-company.svg" />
-          </i>
-          <p>@github</p>
-        </div>
-      </section>
+        <section class="profile-contact-details">
+          <div class="icon-information">
+            <i><img src="/public/images/icon-location.svg" /> </i>
+            <p>San Francisco</p>
+          </div>
+          <div class="icon-information">
+            <i><img src="/public/images/icon-website.svg" /></i>
+            <p id="link">https://github.blog</p>
+          </div>
+          <div class="icon-information not-available">
+            <i>
+              <img src="/public/images/icon-twitter.svg" />
+            </i>
+            <p>Not Available</p>
+          </div>
+          <div class="icon-information">
+            <i>
+              <img src="/public/images/icon-company.svg" />
+            </i>
+            <p>@github</p>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
 </html>

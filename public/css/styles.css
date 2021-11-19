@@ -45,12 +45,8 @@ body {
   cursor: pointer;
 }
 
-.modeText:hover,
-#modeImg:hover {
-  filter: brightness(0);
-}
-.modeText:hover,
-#modeImg:hover {
+.mode:hover > .modeText,
+.mode:hover > #modeImg {
   filter: brightness(0);
 }
 
@@ -73,9 +69,10 @@ body {
   padding-right: 0.7rem;
   padding-top: 0.6rem;
   padding-bottom: 0.75rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 20px 1fr 25%;
+  gap: 0.7rem;
   align-items: center;
-  justify-content: space-between;
 }
 
 .input-search object svg {
@@ -84,7 +81,6 @@ body {
 }
 
 .input-search input {
-  width: 60%;
   border: none;
   color: black;
   font-family: 'Space Mono', monospace;
@@ -105,7 +101,6 @@ body {
 }
 
 .input-search button {
-  width: 25%;
   height: 4.6rem;
   color: #fff;
   background-color: #0079ff;
@@ -121,6 +116,7 @@ body {
 
 .input-search button:hover {
   background-color: #60abff;
+  cursor: pointer;
 }
 
 input[type='search']::-webkit-search-decoration,
@@ -139,6 +135,12 @@ main {
   border-radius: 1.5rem;
   margin-top: 1.6rem;
   filter: drop-shadow(0px 16px 30px rgba(70, 96, 187, 0.1986));
+}
+
+#profile-image-desktop {
+  display: none;
+  border-radius: 50%;
+  width: 117px;
 }
 
 .profile-heading {
@@ -242,6 +244,13 @@ main {
   margin: 0;
 }
 
+.icon-information p:hover {
+  cursor: pointer;
+}
+#link:hover {
+  text-decoration: underline;
+}
+
 .not-available {
   opacity: 0.5;
 }
@@ -270,19 +279,21 @@ main {
     padding: 13.6% 12.8%;
   }
 
+  .input-search {
+    padding: 0.95rem 1rem 0.95rem 3.2rem;
+    gap: 2.4rem;
+  }
+
   .input-search button {
-    width: 18.5%;
     height: 5rem;
+    width: 106px;
+    justify-self: end;
   }
 
   .input-search input,
   ::placeholder {
     font-size: 1.8rem;
     line-height: 2.5rem;
-  }
-
-  .input-search {
-    padding: 0.95rem 1rem 0.95rem 3.2rem;
   }
 
   main {
@@ -317,6 +328,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 3rem;
+    font-size: 1.5rem;
     line-height: 2.2rem;
   }
 
@@ -359,5 +371,41 @@ main {
     font-size: 1.3rem;
     line-height: 1.9rem;
     padding: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 10% 24.5%;
+  }
+
+  main {
+    display: flex;
+    align-items: flex-start;
+    padding: 4.8rem;
+  }
+  button {
+    max-width: 106px;
+  }
+  #profile-image-desktop {
+    display: block;
+  }
+  #profile-image-mobile {
+    display: none;
+  }
+  .global-details {
+    margin-left: 3.7rem;
+  }
+  .profile-details {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .profile-description {
+    margin-top: 2rem;
+  }
+  .profile-contact-details {
+    margin-top: 3.7rem;
   }
 }
