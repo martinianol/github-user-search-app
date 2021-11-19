@@ -45,9 +45,19 @@ body {
   cursor: pointer;
 }
 
-.mode:hover > .modeText,
+.mode:hover > .modeText {
+  color: black;
+}
 .mode:hover > #modeImg {
   filter: brightness(0);
+}
+
+.mode.dark-mode-body:hover > .modeText {
+  color: #4b6a9b;
+}
+.mode.dark-mode-body:hover > #modeImg {
+  filter: invert(40%) sepia(24%) saturate(989%) hue-rotate(178deg) brightness(91%)
+    contrast(85%);
 }
 
 .modeText {
@@ -58,6 +68,13 @@ body {
   margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
+  transition: all 0.7s;
+}
+
+#modeImg,
+.modeText,
+button {
+  transition: all 0.7s;
 }
 
 .input-search {
