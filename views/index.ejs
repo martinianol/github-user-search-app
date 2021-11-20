@@ -30,7 +30,7 @@
   </head>
   <body>
     <section class="logo-mode">
-      <h2 class="logo">devfinder</h2>
+      <a href="/"><h2 class="logo">devfinder</h2></a>
       <div class="mode">
         <p class="modeText">DARK</p>
         <img id="modeImg" src="/public/images/icon-moon.svg" />
@@ -43,20 +43,18 @@
       <button type="submit">Search</button>
     </form>
     <main>
-      <img id="profile-image-desktop" src="/images/octocat.png" />
+      <img id="profile-image-desktop" src='<%=locals.user ? user.avatar_url :
+      '/images/octocat.png'%>' />
       <div class="global-details">
         <section class="profile-heading">
-          <img
-            id="profile-image-mobile"
-            class="profile-image"
-            src="/public/images/octocat.png"
-          />
+          <img id="profile-image-mobile" class="profile-image" src='<%=locals.user ?
+          user.avatar_url : '/images/octocat.png'%>' />
           <div class="profile-details">
             <div>
-              <h1 id="user">The Octocat</h1>
-              <a><h3>@octocat</h3></a>
+              <h1 id="user"><%=locals.user ? user.name : "The Octocat"%></h1>
+              <a><h3>@<%=locals.user ? user.login : "octocat"%></h3></a>
             </div>
-            <p>Joined 25 Jan 2011</p>
+            <p>Joined <%=locals.user ? user.joined : "25 Jan 2011"%></p>
           </div>
         </section>
 
