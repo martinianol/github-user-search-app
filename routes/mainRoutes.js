@@ -7,6 +7,6 @@ const controller = require('../api/githhub');
 //Routing
 
 router.get('/', controller.landing);
-router.get('/user', controller.user);
+router.get('/search', controller.search);
 
 module.exports = router;

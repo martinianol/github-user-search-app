@@ -6,14 +6,15 @@ const controller = {
     res.render('index.ejs');
   },
 
-  user: async (req, res) => {
-    let userToFind = 'martinianol';
+  search: async (req, res) => {
+    let userToFind = req.query.keyword
+    console.log(userToFind);
     let url = 'https://api.github.com/users/'
     const response = await fetch(`${url}${userToFind}`);
-    const data = await response.json();
+    const user = await response.json();
 
-    console.log(data);
-    res.render('index.ejs');
+    console.log(user);
+    res.render('index.ejs', { user });
   }
 }
 

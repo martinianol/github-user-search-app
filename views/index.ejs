@@ -22,9 +22,9 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="public/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
 
-    <script src="/public/js/index.js" defer></script>
+    <script src="/js/index.js" defer></script>
 
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
@@ -36,13 +36,14 @@
         <img id="modeImg" src="/public/images/icon-moon.svg" />
       </div>
     </section>
-    <form class="input-search">
-      <object id="search-icon" data="/public/images/icon-search.svg"></object>
-      <input type="search" placeholder="Search GitHub username..." />
+
+    <form class="input-search" action="/search/" method="get">
+      <object id="search-icon" data="/images/icon-search.svg"></object>
+      <input type="search" name="keyword" placeholder="Search GitHub username..." />
       <button type="submit">Search</button>
     </form>
     <main>
-      <img id="profile-image-desktop" src="/public/images/octocat.png" />
+      <img id="profile-image-desktop" src="/images/octocat.png" />
       <div class="global-details">
         <section class="profile-heading">
           <img

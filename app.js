@@ -11,6 +11,14 @@ app.use('/public', express.static('public'));
 //Allow CORS
 app.use(cors());
 
+//Setting route where statics files are
+publicPath = path.join(__dirname, './public')
+app.use(express.static(publicPath))
+
+//Setting express to be able to work with data from forms//
+app.use(express.urlencoded({ extended: false })) // without this line data from body does not go through
+app.use(express.json())
+
 
 //Template engine settings//
 app.set('views', path.join(__dirname, 'views')) // indica al template engine donde buscar las vistas//
