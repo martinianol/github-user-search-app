@@ -72,9 +72,9 @@
               <th>Following</th>
             </tr>
             <tr>
-              <td>8</td>
-              <td>3938</td>
-              <td>9</td>
+              <td><%=locals.user? user.public_repos : '8'%></td>
+              <td><%=locals.user? user.followers : '3938'%></td>
+              <td><%=locals.user? user.following : '9'%></td>
             </tr>
           </table>
         </section>
