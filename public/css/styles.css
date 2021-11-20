@@ -109,6 +109,7 @@ button {
   height: 25px;
   font-size: 1.3rem;
   line-height: 2.5rem;
+  position: relative;
 }
 
 *:focus {
@@ -147,9 +148,36 @@ input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
-input[type='search'] {
-  background: transparent;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
 }
+
+input[type='search'] {
+  background-color: transparent;
+}
+
+.not-found {
+  color: #F74646;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  position: absolute;
+  right: 21%;
+}
+
+input:focus,
+input:active {
+  background-color: transparent;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+
 main {
   padding: 3.1rem 2.4rem 8rem 2.4rem;
   background-color: #fefefe;
@@ -396,9 +424,9 @@ main {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
   body {
-    padding: 10% 24.5%;
+    padding: 10% 15%;
   }
 
   main {

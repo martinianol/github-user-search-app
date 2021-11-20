@@ -12,6 +12,12 @@ const controller = {
     const response = await fetch(`${url}${userToFind}`);
     const user = await response.json();
 
+    if (user.message === 'Not Found') {
+      let notFound = user
+      console.log(notFound)
+      return res.render('index.ejs', { notFound });
+    }
+
     let timestamp = user.created_at;
     let toDate = new Date(timestamp).getDate();
     let toMonth = new Date(timestamp).getMonth();
@@ -24,7 +30,7 @@ const controller = {
     user.joined = `${toDate} ${month} ${toYear}`
     console.log(user);
 
-    /* console.log(user); */
+
     res.render('index.ejs', { user });
   }
 }

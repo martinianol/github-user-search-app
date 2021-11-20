@@ -40,8 +40,10 @@
     <form class="input-search" action="/search/" method="get">
       <object id="search-icon" data="/images/icon-search.svg"></object>
       <input type="search" name="keyword" placeholder="Search GitHub username..." />
+      <span class='not-found'><%= locals.notFound ? 'No results': '' %></span>
       <button type="submit">Search</button>
     </form>
+
     <main>
       <img id="profile-image-desktop" src='<%=locals.user ? user.avatar_url :
       '/images/octocat.png'%>' />
@@ -80,13 +82,34 @@
         </section>
 
         <section class="profile-contact-details">
-          <div class="icon-information">
+          <div class="icon-information <%= (locals.user && user.location === null) ?  'not-available' :'' %>" >
             <i><img src="/public/images/icon-location.svg" /> </i>
-            <p>San Francisco</p>
+            <p>
+              <% if(locals.user) { %>
+                <% if (user.location === null) { %>
+                 <%='Not Available'%>
+               <% } else { %>
+                   <%=user.location %>
+             <% }} else { %>
+                 <%='San Francisco'%>
+             <%}%>
+              
+            </p>
           </div>
-          <div class="icon-information">
+          <div class="icon-information <%= (locals.user && user.blog === '') ?  'not-available' :'' %>" >
             <i><img src="/public/images/icon-website.svg" /></i>
-            <p id="link">https://github.blog</p>
+            <p id="link">
+
+              <% if(locals.user) { %>
+                 <% if (user.blog === '') { %>
+                  <%='Not Available'%>
+                <% } else { %>
+                    <%=user.blog %>
+              <% }} else { %>
+                  <%='https://github.blog'%>
+              <%}%>
+            </p>               
+            
           </div>
           <div class="icon-information not-available">
             <i>
@@ -98,7 +121,7 @@
             <i>
               <img src="/public/images/icon-company.svg" />
             </i>
-            <p>@github</p>
+            <p><%=locals.user? user.html_url : '@github'%></p>
           </div>
         </section>
       </div>
