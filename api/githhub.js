@@ -14,7 +14,6 @@ const controller = {
 
     if (user.message === 'Not Found') {
       let notFound = user
-      console.log(notFound)
       return res.render('index.ejs', { notFound });
     }
 
@@ -28,8 +27,6 @@ const controller = {
     const month = formatter.format(date);
 
     user.joined = `${toDate} ${month} ${toYear}`
-    console.log(user);
-
 
     res.render('index.ejs', { user });
   }

@@ -39,7 +39,7 @@
 
     <form class="input-search" action="/search/" method="get">
       <object id="search-icon" data="/images/icon-search.svg"></object>
-      <input type="search" name="keyword" placeholder="Search GitHub username..." />
+      <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search GitHub username..." %>"/>
       <span class='not-found'><%= locals.notFound ? 'No results': '' %></span>
       <button type="submit">Search</button>
     </form>
@@ -62,7 +62,14 @@
 
         <section class="profile-description">
           <h2>
-            <%= locals.user ? user.bio : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Donec odio. Quisque voluptat mattis eros.'%>
+            <% if(locals.user) { %>
+              <%if(user.bio === null) { %>
+                <%="This profile has no bio"%>
+              <% } else { %>
+                <%=user.bio%>
+                <% }} else { %>
+              <%='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Donec odio. Quisque voluptat mattis eros.'  %> 
+              <%}%>
           </h2>
         </section>
 
