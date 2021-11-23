@@ -29,21 +29,22 @@
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
-    <section class="logo-mode">
+    <header class="logo-mode">
       <a href="/"><h2 class="logo">devfinder</h2></a>
       <div class="mode">
         <p class="modeText">DARK</p>
         <img alt ="icon moon" id="modeImg" src="/public/images/icon-moon.svg" />
       </div>
-    </section>
-
-    <form class="input-search" action="/search/" method="get">
-      <object alt="search icon" id="search-icon" data="/images/icon-search.svg"></object>
-      <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search GitHub username..." %>"/>
-      <span class='not-found'><%= locals.notFound ? 'No results': '' %></span>
-      <button type="submit">Search</button>
-    </form>
-
+    </header>
+    <aside>
+      <form class="input-search" action="/search/" method="get">
+        <object alt="search icon" id="search-icon" data="/images/icon-search.svg"></object>
+        <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search GitHub username..." %>"/>
+        <span class='not-found'><%= locals.notFound ? 'No results': '' %></span>
+        <button type="submit">Search</button>
+      </form>
+    </aside>
+      
     <main>
       <img alt="profile picture" id="profile-image-desktop" src='<%=locals.user ? user.avatar_url :
       '/images/octocat.png'%>' />
