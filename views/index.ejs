@@ -33,12 +33,12 @@
       <a href="/"><h2 class="logo">devfinder</h2></a>
       <div class="mode">
         <p class="modeText">DARK</p>
-        <img id="modeImg" src="/public/images/icon-moon.svg" />
+        <img alt ="icon moon" id="modeImg" src="/public/images/icon-moon.svg" />
       </div>
     </section>
 
     <form class="input-search" action="/search/" method="get">
-      <object id="search-icon" data="/images/icon-search.svg"></object>
+      <object alt="search icon" id="search-icon" data="/images/icon-search.svg"></object>
       <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search GitHub username..." %>"/>
       <span class='not-found'><%= locals.notFound ? 'No results': '' %></span>
       <button type="submit">Search</button>
