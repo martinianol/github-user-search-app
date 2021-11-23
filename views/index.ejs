@@ -45,11 +45,11 @@
     </form>
 
     <main>
-      <img id="profile-image-desktop" src='<%=locals.user ? user.avatar_url :
+      <img alt="profile picture" id="profile-image-desktop" src='<%=locals.user ? user.avatar_url :
       '/images/octocat.png'%>' />
       <div class="global-details">
         <section class="profile-heading">
-          <img id="profile-image-mobile" class="profile-image" src='<%=locals.user ?
+          <img alt="profile picture" id="profile-image-mobile" class="profile-image" src='<%=locals.user ?
           user.avatar_url : '/images/octocat.png'%>' />
           <div class="profile-details">
             <div>
@@ -90,7 +90,7 @@
 
         <section class="profile-contact-details">
           <div class="icon-information <%= (locals.user && user.location === null) ?  'not-available' :'' %>" >
-            <i><img src="/public/images/icon-location.svg" /> </i>
+            <i><img alt="icon location" src="/public/images/icon-location.svg" /> </i>
             <p>
               <% if(locals.user) { %>
                 <% if (user.location === null) { %>
@@ -104,7 +104,7 @@
             </p>
           </div>
           <div class="icon-information <%= (locals.user && user.blog === '') ?  'not-available' :'' %>" >
-            <i><img src="/public/images/icon-website.svg" /></i>
+            <i><img alt="icon information" src="/public/images/icon-website.svg" /></i>
             <p id="link">
 
               <% if(locals.user) { %>
@@ -120,13 +120,13 @@
           </div>
           <div class="icon-information not-available">
             <i>
-              <img src="/public/images/icon-twitter.svg" />
+              <img alt="icon twitter" src="/public/images/icon-twitter.svg" />
             </i>
             <p>Not Available</p>
           </div>
           <div class="icon-information">
             <i>
-              <img src="/public/images/icon-company.svg" />
+              <img alt="icon company" src="/public/images/icon-company.svg" />
             </i>
             <p><%=locals.user? user.html_url : '@github'%></p>
           </div>
